@@ -2,9 +2,12 @@ package Pages;
 
 import Utilities.GWD;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 
 import java.time.Duration;
 
@@ -33,9 +36,12 @@ public class Parent {
 
     public void myJsClick(WebElement element){
         wait.until(ExpectedConditions.elementToBeClickable(element));
-        scrollToElement(element);
         JavascriptExecutor js=(JavascriptExecutor)GWD.getDriver();
         js.executeScript("arguments[0].click();", element);
+    }
+    public void verifyContainsText(WebElement element, String value){
+        wait.until(ExpectedConditions.textToBePresentInElement(element,value));
+        Assert.assertTrue(element.getText().toLowerCase().contains(value.toLowerCase()));
     }
 
 }
