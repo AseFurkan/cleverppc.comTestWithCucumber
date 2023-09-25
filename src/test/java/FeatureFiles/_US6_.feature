@@ -1,4 +1,4 @@
-Feature:
+Feature:Clever test
 
   Scenario: Test US6
   When Navigate to Website

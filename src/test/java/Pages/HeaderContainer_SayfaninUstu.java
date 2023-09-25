@@ -13,6 +13,25 @@ public class HeaderContainer_SayfaninUstu  extends Parent{
     public WebElement contactUs;
 
 
+    @FindBy(linkText = "Sign in")
+    public WebElement signIn;
+
+    @FindBy(id = "email")
+    public WebElement email;
+
+    @FindBy(id = "passwd")
+    public WebElement password;
+
+    @FindBy(id = "SubmitLogin")
+    public WebElement signInButton;
+
+    @FindBy (xpath = "//span[text()='Team yedi']")
+    public WebElement myAccount;
+
+    @FindBy(linkText = "Dresses")
+    public WebElement dress;
+
+
 
 
 
