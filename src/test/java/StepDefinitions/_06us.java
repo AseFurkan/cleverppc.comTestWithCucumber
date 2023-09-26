@@ -1,14 +1,19 @@
 package StepDefinitions;
 
+import Pages.CenterContainer_SayfaninOrtasi;
 import Pages.HeaderContainer;
 import Pages.HeaderContainer_SayfaninUstu;
 import io.cucumber.java.en.*;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 
-public class _06us {
-    HeaderContainer_SayfaninUstu hd = new HeaderContainer_SayfaninUstu();
+import java.util.ArrayList;
 
+public class _06us {
+    ArrayList<WebElement> element = new ArrayList<>();
+
+    HeaderContainer_SayfaninUstu hd = new HeaderContainer_SayfaninUstu();
+    CenterContainer_SayfaninOrtasi cs = new CenterContainer_SayfaninOrtasi();
 
     @Then("Enter username and password and click login button")
     public void enterUsernameAndPasswordAndClickLoginButton() {
@@ -18,12 +23,13 @@ public class _06us {
         hd.password.sendKeys("team7");
         hd.signInButton.click();
 
+
     }
 
     @And("User should login successfully")
     public void userShouldLoginSuccessfully() {
 
-        Assert.assertTrue(hd.myAccount.isEnabled(),"Başarıyla giriş yapılamadı");
+        Assert.assertTrue(hd.myAccount.isEnabled(), "Başarıyla giriş yapılamadı");
     }
 
     @And("Click to dresses")
@@ -33,14 +39,23 @@ public class _06us {
 
     @Then("Select a dress and continue shopping")
     public void selectADressAndContinueShopping() {
+        element.add(cs.allDresses1);
+        cs.myClick(cs.continueShop);
     }
 
     @And("Select another dress and continue shopping")
     public void selectAnotherDressAndContinueShopping() {
+        element.add(cs.allDresses2);
+        cs.myClick(cs.continueShop);
+
+
     }
 
     @And("Select another last dress")
     public void selectAnotherLastDress() {
+        element.add(cs.allDresses3);
+        cs.myClick(cs.shoppingCart);
+
     }
 
     @When("Check shopping cart")
