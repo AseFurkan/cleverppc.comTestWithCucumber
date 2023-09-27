@@ -28,7 +28,7 @@ public class HeaderContainer_SayfaninUstu  extends Parent{
     @FindBy (xpath = "//span[text()='Team yedi']")
     public WebElement myAccount;
 
-    @FindBy(linkText = "Dresses")
+    @FindBy(xpath = "//a[@title='Dresses']")
     public WebElement dress;
 
 
