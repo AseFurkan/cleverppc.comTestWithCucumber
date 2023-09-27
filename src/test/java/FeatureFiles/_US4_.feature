@@ -1,7 +1,8 @@
 Feature:Adding products to the basket
 
+  @Cart @Smoke @Regression
   Scenario:Adding products to the basket
-    Given Navigate to Website
+    When Navigate to Website
     When Click women button
     Then  Click dresses button
     And Click summerDresses button
