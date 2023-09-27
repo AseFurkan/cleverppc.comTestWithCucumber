@@ -43,5 +43,8 @@ public class Parent {
         wait.until(ExpectedConditions.textToBePresentInElement(element,value));
         Assert.assertTrue(element.getText().toLowerCase().contains(value.toLowerCase()));
     }
+    public void hoverOver(WebElement element){
+        new Actions(GWD.getDriver()).moveToElement(element).build().perform();
+    }
 
 }

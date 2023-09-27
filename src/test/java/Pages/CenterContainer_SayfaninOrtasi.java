@@ -5,6 +5,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import java.util.List;
+
 public class CenterContainer_SayfaninOrtasi extends Parent {
     public CenterContainer_SayfaninOrtasi() {
         PageFactory.initElements(GWD.getDriver(), this);
@@ -36,6 +38,18 @@ public class CenterContainer_SayfaninOrtasi extends Parent {
 
     @FindBy(xpath = "//a[@title='Proceed to checkout']")
     public WebElement shoppingCart;
+
+    @FindBy(css = "[class='right-block'] [class='product-name']")
+    public List<WebElement> quickView;
+
+    @FindBy(xpath = "//*[@title='Add to cart']")
+    public List< WebElement> addToCart;
+    @FindBy(css = "[class*='continue btn']")
+    public  WebElement continueBtn;
+    @FindBy(css = "[title='View my shopping cart']")
+    public  WebElement cartBtn;
+    @FindBy(css = "[class*='description'] [class*='name'] a")
+    public  List<WebElement> checkoutProductName;
 
 
 
