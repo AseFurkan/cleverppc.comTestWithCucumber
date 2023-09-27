@@ -1,7 +1,6 @@
 package StepDefinitions;
 
 import Pages.CenterContainer_SayfaninOrtasi;
-import Pages.HeaderContainer;
 import Pages.HeaderContainer_SayfaninUstu;
 import io.cucumber.java.en.*;
 import org.openqa.selenium.WebElement;
