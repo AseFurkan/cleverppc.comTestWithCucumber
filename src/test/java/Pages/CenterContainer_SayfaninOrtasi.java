@@ -51,6 +51,4 @@ public class CenterContainer_SayfaninOrtasi extends Parent {
     @FindBy(css = "[class*='description'] [class*='name'] a")
     public  List<WebElement> checkoutProductName;
 
-
-
 }
