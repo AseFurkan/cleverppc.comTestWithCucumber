@@ -79,4 +79,28 @@ public class CenterContainer_SayfaninOrtasi extends Parent {
     public WebElement unSuccessMessage;
     @FindBy(name = "processAddress")
     public WebElement proceedToCheckout3;
+    @FindBy(css = "[class='heading-counter']")
+    public WebElement productsCount;
+    @FindBy(css = "[id*='_bottom']+[class*='count']")
+    public WebElement productsCount2;
+    @FindBy (css = "[title='Women']")
+    public WebElement women;
+
+    @FindBy (css = "[class='last']>span")
+    public WebElement dresses;
+
+    @FindBy(css= "[title='Short dress, long dress, silk dress, printed dress, you will find the perfect dress for summer.']")
+    public WebElement summerDresses;
+
+    @FindBy (xpath= "//a[@class='product-name']")
+    public WebElement dress;
+
+    @FindBy (xpath = "//button[@class='exclusive']//span")
+    public WebElement add;
+
+    @FindBy (xpath = "//span[@class='title']")
+    public WebElement product;
+
+
+
 }
