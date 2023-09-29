@@ -4,4 +4,6 @@ Scenario:us-6
   Then Enter username and password and click login button
   And Click to dresses
   Then kullanici rastgele urun secsin
-  Then urunlerın sepette oldugunu dogrula
+  Then urunlerin sepette oldugunu dogrula
+#  7 testcase adımları
+
