@@ -29,7 +29,7 @@ public class _07_SiparişVer {
         Assert.assertTrue(cd.unSuccessMessage.getText().contains(" Lütfen daha sonra tekrar deneyin"));
 
         GWD.getDriver().navigate().back();
-
+        System.out.println("testdeneme");
 
     }
 }
