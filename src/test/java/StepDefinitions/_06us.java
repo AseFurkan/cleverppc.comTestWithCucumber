@@ -1,7 +1,6 @@
 package StepDefinitions;
 
 import Pages.CenterContainer_SayfaninOrtasi;
-import Pages.HeaderContainer;
 import Pages.HeaderContainer_SayfaninUstu;
 import io.cucumber.java.en.*;
 import org.openqa.selenium.WebElement;
@@ -45,7 +44,6 @@ public class _06us {
 
     @And("Select another dress and continue shopping")
     public void selectAnotherDressAndContinueShopping() {
-        element.add(cs.allDresses2);
         cs.myClick(cs.continueShop);
 
 
@@ -53,7 +51,6 @@ public class _06us {
 
     @And("Select another last dress")
     public void selectAnotherLastDress() {
-        element.add(cs.allDresses3);
         cs.myClick(cs.shoppingCart);
        System.out.println("deneme");
 

@@ -21,7 +21,8 @@ public class _07_SiparişVer {
         cd.myClick(cd.proceedToCheckout2);
         _softAssert.assertTrue(cd.shipmentMethod.isSelected(), "Method seçili gelmedi");
         _softAssert.assertAll();
-        new Actions(GWD.getDriver()).click(cd.shipmentMethod).sendKeys(Keys.TAB).sendKeys(Keys.SPACE).build().perform();
+        cd.myClick(cd.iAgree); //loc sıkıkntısı vardı tab kısmına gerek kalmadı
+       // new Actions(GWD.getDriver()).click(cd.shipmentMethod).sendKeys(Keys.TAB).sendKeys(Keys.SPACE).build().perform();
         cd.myClick(cd.proceedToCheckout3);
         cd.myClick(cd.paypal);
 

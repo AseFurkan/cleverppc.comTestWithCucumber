@@ -23,28 +23,16 @@ public class CenterContainer_SayfaninOrtasi extends Parent {
     public WebElement send;
     @FindBy(css = "[class*='success']")
     public WebElement success;
-  
+
   @FindBy(xpath = "(//a[@title='Add to cart'])[1]")
     public WebElement allDresses1;
-  
-  @FindBy(xpath = "(//a[@title='Add to cart'])[1]")
-    public WebElement allDresses1;
-  
-    @FindBy(xpath = "(//a[@title='Add to cart'])[2]")
-    public WebElement allDresses2;
-    @FindBy(xpath = "(//a[@title='Add to cart'])[3]")
-    public WebElement allDresses3;
-  
+
     @FindBy(xpath = "//span[@title='Continue shopping']")
     public WebElement continueShop;
 
     @FindBy(xpath = "//a[@title='Proceed to checkout']")
     public WebElement shoppingCart;
-  
-    @FindBy(xpath = "//span[@title='Continue shopping']")
-    public WebElement continueShop;
-    @FindBy(xpath = "//a[@title='Proceed to checkout']")
-    public WebElement shoppingCart;
+
     @FindBy(css = "[class='right-block'] [class='product-name']")
     public List<WebElement> quickView;
     @FindBy(xpath = "//*[@title='Add to cart']")
@@ -83,7 +71,7 @@ public class CenterContainer_SayfaninOrtasi extends Parent {
     public WebElement adressControlText;
     @FindBy(css = "[id^='delivery']")
     public WebElement shipmentMethod;
-    @FindBy(css = "[class='checker'] span")
+    @FindBy(id= "uniform-cgv")
     public WebElement iAgree;
     @FindBy(id = "paypal-standard-btn")
     public WebElement paypal;
