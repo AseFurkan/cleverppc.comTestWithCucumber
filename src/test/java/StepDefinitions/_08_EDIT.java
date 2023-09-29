@@ -15,6 +15,7 @@ public class _08_EDIT {
 
     @Then("kullanici rastgele urun secsin")
     public void kullaniciRastgeleUrunSecsin() {
+
         Random random = new Random();
         List<WebElement> selectedElements = new ArrayList<>();
         List<WebElement> selectedAddToCarts = new ArrayList<>();
@@ -48,7 +49,7 @@ public class _08_EDIT {
                 sayac++;
             }
         }
-        Assert.assertTrue(sayac==3,"Yanlış ürün eklendi");
+        Assert.assertTrue(selectedProductName.size()==sayac,"Yanlış ürün eklendi");
 
     }
 
@@ -59,6 +60,7 @@ public class _08_EDIT {
             throw new RuntimeException(e);
         }
     }
+
 
     @Then("urunlerin sepette oldugunu dogrula")
     public void urunlerinSepetteOldugunuDogrula() {

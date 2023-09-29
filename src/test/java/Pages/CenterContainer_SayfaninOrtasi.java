@@ -4,6 +4,7 @@ import Utilities.GWD;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+
 import java.util.List;
 
 public class CenterContainer_SayfaninOrtasi extends Parent {
@@ -23,6 +24,7 @@ public class CenterContainer_SayfaninOrtasi extends Parent {
     public WebElement send;
     @FindBy(css = "[class*='success']")
     public WebElement success;
+
    @FindBy(xpath = "(//a[@title='Add to cart'])[1]")
     public WebElement allDresses1;
     @FindBy(xpath = "//span[@title='Continue shopping']")
@@ -67,13 +69,14 @@ public class CenterContainer_SayfaninOrtasi extends Parent {
     public WebElement adressControlText;
     @FindBy(css = "[id^='delivery']")
     public WebElement shipmentMethod;
-    @FindBy(id= "uniform-cgv")
+    @FindBy(id = "uniform-cgv")
     public WebElement iAgree;
     @FindBy(id = "paypal-standard-btn")
     public WebElement paypal;
     @FindBy(css = "[class='message']")
     public WebElement unSuccessMessage;
-    @FindBy(name = "processAddress")
+  
+   @FindBy(name = "processAddress")
     public WebElement proceedToCheckout3;
     @FindBy(css = "[class='heading-counter']")
     public WebElement productsCount;
@@ -98,24 +101,32 @@ public class CenterContainer_SayfaninOrtasi extends Parent {
     public WebElement product;
 
 
+    @FindBy(name = "processCarrier")
+    public WebElement processCarrier;
 
+    @FindBy(id = "ccbill-standard-btn")
+    public WebElement creditcart;
 
+    @FindBy(xpath = "//body[text()='Invalid request (1).']")
+    public WebElement creditcartwarming;
 
+    @FindBy(xpath = "(//div[@class='col-xs-12'])[1]")
+    public WebElement PayBankWire;
 
+    @FindBy(id = "total_price")
+    public WebElement totalPrice;
 
+    @FindBy(id = "amount")
+    public WebElement amount;
 
+    @FindBy(xpath = "//span[text()='I confirm my order']")
+    public WebElement confirmbutton;
 
-
-
-
-
-
-
-
-
-
+    @FindBy(css = "[class='alert alert-success']")
+    public WebElement orderComplete;
     @FindBy(css = "[class='product-image-container']")
     public List<WebElement> images;
+
 
 
 }
