@@ -5,6 +5,8 @@ import Utilities.GWD;
 import io.cucumber.java.en.And;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
+import sun.security.krb5.SCDynamicStoreConfig;
+import sun.util.resources.CalendarData;
 
 public class _05_listelenenUrunlerinSayisiKontrolü {
     CenterContainer_SayfaninOrtasi cd=new CenterContainer_SayfaninOrtasi();
@@ -24,11 +26,22 @@ public class _05_listelenenUrunlerinSayisiKontrolü {
     public void kullanıcıOluşanListeninAltKısımdaYerAlanXInOlduğunuDoğrulamalıdır(String sayi) {
 
         cd.scrollToElement(cd.productsCount2);
-        String text2=cd.productsCount2.getText().replaceAll("[ items]","");
 
-        System.out.println(text2);
-                //Showing 1 - 5 of 5 items
+        int text2=cd.productsCount2.getText().lastIndexOf(" items");
+        String  count=cd.productsCount2.getText().substring(text2-1,text2);
 
 
+
+        Assert.assertTrue(Integer.parseInt(count)==5,"Yanlış ürün adeti mesajı geliyor");
+
+
+
+
+    }
+
+
+    @And("Kullanıcı, listede yer alan ürünleri sayarak Satır sayısı, Resim  doğrulamalıdır")
+    public void kullanıcıListedeYerAlanÜrünleriSayarakSatırSayısıResimDoğrulamalıdır() {
+        Assert.assertTrue(cd.images.size()==5,"Sıralanan ürün adeti yanlıştır.");
     }
 }
