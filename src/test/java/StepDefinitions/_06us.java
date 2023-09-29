@@ -1,6 +1,7 @@
 package StepDefinitions;
 
 import Pages.CenterContainer_SayfaninOrtasi;
+import Pages.HeaderContainer;
 import Pages.HeaderContainer_SayfaninUstu;
 import io.cucumber.java.en.*;
 import org.openqa.selenium.WebElement;
@@ -54,6 +55,7 @@ public class _06us {
     public void selectAnotherLastDress() {
         element.add(cs.allDresses3);
         cs.myClick(cs.shoppingCart);
+       System.out.println("deneme");
 
     }
 
