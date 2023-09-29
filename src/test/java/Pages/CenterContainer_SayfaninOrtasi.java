@@ -25,15 +25,12 @@ public class CenterContainer_SayfaninOrtasi extends Parent {
     @FindBy(css = "[class*='success']")
     public WebElement success;
 
-    @FindBy(xpath = "(//a[@title='Add to cart'])[1]")
+   @FindBy(xpath = "(//a[@title='Add to cart'])[1]")
     public WebElement allDresses1;
-
     @FindBy(xpath = "//span[@title='Continue shopping']")
     public WebElement continueShop;
-
     @FindBy(xpath = "//a[@title='Proceed to checkout']")
     public WebElement shoppingCart;
-
     @FindBy(css = "[class='right-block'] [class='product-name']")
     public List<WebElement> quickView;
     @FindBy(xpath = "//*[@title='Add to cart']")
@@ -78,77 +75,30 @@ public class CenterContainer_SayfaninOrtasi extends Parent {
     public WebElement paypal;
     @FindBy(css = "[class='message']")
     public WebElement unSuccessMessage;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  
+   @FindBy(name = "processAddress")
+    public WebElement proceedToCheckout3;
+    @FindBy(css = "[class='heading-counter']")
+    public WebElement productsCount;
+    @FindBy(css = "[id*='_bottom']+[class*='count']")
+    public WebElement productsCount2;
+    @FindBy (css = "[title='Women']")
+    public WebElement women;
+
+    @FindBy (css = "[class='last']>span")
+    public WebElement dresses;
+
+    @FindBy(css= "[title='Short dress, long dress, silk dress, printed dress, you will find the perfect dress for summer.']")
+    public WebElement summerDresses;
+
+    @FindBy (xpath= "//a[@class='product-name']")
+    public WebElement dress;
+
+    @FindBy (xpath = "//button[@class='exclusive']//span")
+    public WebElement add;
+
+    @FindBy (xpath = "//span[@class='title']")
+    public WebElement product;
 
 
     @FindBy(name = "processCarrier")
@@ -174,6 +124,9 @@ public class CenterContainer_SayfaninOrtasi extends Parent {
 
     @FindBy(css = "[class='alert alert-success']")
     public WebElement orderComplete;
+    @FindBy(css = "[class='product-image-container']")
+    public List<WebElement> images;
+
 
 
 }
