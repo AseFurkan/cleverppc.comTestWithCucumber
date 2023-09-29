@@ -27,7 +27,7 @@ public class _08_ {
 
     @Then("Select Subject Heading")
     public void selectSubjectHeading() {
-        makingSelectionByIndex(cd.subjectHeading, 2);
+        cd.makingSelectionByIndex(cd.subjectHeading, 2);
     }
 
     @And("Enter e-mail as {string} in the input")
@@ -44,25 +44,25 @@ public class _08_ {
     public void uploadImage() throws AWTException {
         Actions actions = new Actions(GWD.getDriver());
         actions.sendKeys(Keys.TAB).sendKeys(Keys.ENTER).build().perform();
-        bekle(5);
+
 
         Robot robot = new Robot();
         StringSelection dosyaYolu = new StringSelection("C:\\Users\\pc\\Desktop\\BAGLARS\\Resimlerim\\20230624_202601.jpg");
         Toolkit.getDefaultToolkit().getSystemClipboard().setContents(dosyaYolu, null);
 
-        bekle(1);
+        cd.bekle(1);
         robot.keyPress(KeyEvent.VK_CONTROL);
         robot.keyPress(KeyEvent.VK_V);
 
-        bekle(1);
+        cd.bekle(1);
         robot.keyRelease(KeyEvent.VK_CONTROL);
         robot.keyRelease(KeyEvent.VK_V);
 
-        bekle(1);
+        cd.bekle(1);
         robot.keyPress(KeyEvent.VK_ENTER);
         robot.keyRelease(KeyEvent.VK_ENTER);
 
-        bekle(1);
+        cd.bekle(1);
 
 
     }
@@ -75,21 +75,12 @@ public class _08_ {
     @Then("Click Send button")
     public void clickSendButton() {
         cd.myClick(cd.send);
-        bekle(5);
+        cd.bekle(5);
     }
 
-    public void makingSelectionByIndex(WebElement element, int sayi) {
-        Select menu = new Select(element);
-        menu.selectByIndex(sayi);
-    }
 
-    public void bekle(int sn) {
-        try {
-            Thread.sleep(sn * 1000);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
-    }
+
+
 
     @And("Success message should be displayed")
     public void successMessageShouldBeDisplayed() {

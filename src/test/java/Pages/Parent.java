@@ -6,10 +6,13 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
 import java.time.Duration;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Parent {
 
@@ -43,8 +46,41 @@ public class Parent {
         wait.until(ExpectedConditions.textToBePresentInElement(element,value));
         Assert.assertTrue(element.getText().toLowerCase().contains(value.toLowerCase()));
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     public void hoverOver(WebElement element){
         new Actions(GWD.getDriver()).moveToElement(element).build().perform();
+    }
+    public void makingSelectionByIndex(WebElement element, int sayi) {
+        Select menu = new Select(element);
+        menu.selectByIndex(sayi);
+    }
+    public void bekle(int sn) {
+        try {
+            Thread.sleep(sn * 1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
     }
 
 }
