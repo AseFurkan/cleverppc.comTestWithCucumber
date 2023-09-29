@@ -31,4 +31,7 @@ public class FooterContainer_SayfaninAlti  extends Parent{
 
     @FindBy(linkText = "Sitemap")
     public WebElement siteMap;
+
+
+
 }
