@@ -55,7 +55,7 @@ public class _06us {
     public void selectAnotherLastDress() {
         element.add(cs.allDresses3);
         cs.myClick(cs.shoppingCart);
-        System.out.println("deneme");
+       System.out.println("deneme");
 
     }
 
