@@ -23,16 +23,12 @@ public class CenterContainer_SayfaninOrtasi extends Parent {
     public WebElement send;
     @FindBy(css = "[class*='success']")
     public WebElement success;
-
-  @FindBy(xpath = "(//a[@title='Add to cart'])[1]")
+   @FindBy(xpath = "(//a[@title='Add to cart'])[1]")
     public WebElement allDresses1;
-
     @FindBy(xpath = "//span[@title='Continue shopping']")
     public WebElement continueShop;
-
     @FindBy(xpath = "//a[@title='Proceed to checkout']")
     public WebElement shoppingCart;
-
     @FindBy(css = "[class='right-block'] [class='product-name']")
     public List<WebElement> quickView;
     @FindBy(xpath = "//*[@title='Add to cart']")
@@ -101,6 +97,25 @@ public class CenterContainer_SayfaninOrtasi extends Parent {
     @FindBy (xpath = "//span[@class='title']")
     public WebElement product;
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    @FindBy(css = "[class='product-image-container']")
+    public List<WebElement> images;
 
 
 }

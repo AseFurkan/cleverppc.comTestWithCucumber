@@ -20,8 +20,9 @@ public class _04_ {
      @Then("Click add")
      public void clickAdd() {cd.myClick(cd.add);}
      @And("product should be displayed")
-     public void productShouldBeDisplayed() {cd.verifyContainsText(cd.product,"Product successfully added to your shopping cart");
+     public void productShouldBeDisplayed() {
+          cd.verifyContainsText(cd.product, "Product successfully added to your shopping cart");
 
-
+     }
 
        }
