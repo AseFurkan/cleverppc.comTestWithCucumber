@@ -44,4 +44,6 @@ public class _03_CreateAddress {
         String text=cd.adressText.getText();
         Assert.assertTrue(text.contains("Your addresses are listed below."), "Adress kaydedilemedi");
     }
+
+
 }
