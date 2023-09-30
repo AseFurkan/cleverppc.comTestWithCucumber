@@ -7,8 +7,8 @@ import org.openqa.selenium.support.PageFactory;
 
 import java.util.List;
 
-public class CenterContainer_SayfaninOrtasi extends Parent {
-    public CenterContainer_SayfaninOrtasi() {
+public class CenterContainer extends Parent {
+    public CenterContainer() {
         PageFactory.initElements(GWD.getDriver(), this);
     }
 
@@ -16,16 +16,17 @@ public class CenterContainer_SayfaninOrtasi extends Parent {
     public WebElement subjectHeading;
     @FindBy(id = "email")
     public WebElement email;
-    @FindBy(id = "id_order")
+    @FindBy(name = "id_order")
     public WebElement orderReference;
+    @FindBy(name = "id_product")
+    public WebElement productSelect;
     @FindBy(id = "message")
     public WebElement message;
     @FindBy(id = "submitMessage")
     public WebElement send;
     @FindBy(css = "[class*='success']")
     public WebElement success;
-
-   @FindBy(xpath = "(//a[@title='Add to cart'])[1]")
+    @FindBy(xpath = "(//a[@title='Add to cart'])[1]")
     public WebElement allDresses1;
     @FindBy(xpath = "//span[@title='Continue shopping']")
     public WebElement continueShop;
@@ -55,6 +56,9 @@ public class CenterContainer_SayfaninOrtasi extends Parent {
     public WebElement state;
     @FindBy(id = "phone")
     public WebElement phone;
+    @FindBy(id = "alias")
+    public WebElement myAddress;
+
     @FindBy(id = "submitAddress")
     public WebElement saveBtn;
     @FindBy(css = "[class='addresses'] strong")
@@ -75,58 +79,42 @@ public class CenterContainer_SayfaninOrtasi extends Parent {
     public WebElement paypal;
     @FindBy(css = "[class='message']")
     public WebElement unSuccessMessage;
-  
-   @FindBy(name = "processAddress")
+    @FindBy(name = "processAddress")
     public WebElement proceedToCheckout3;
     @FindBy(css = "[class='heading-counter']")
     public WebElement productsCount;
     @FindBy(css = "[id*='_bottom']+[class*='count']")
     public WebElement productsCount2;
-    @FindBy (css = "[title='Women']")
+    @FindBy(css = "[title='Women']")
     public WebElement women;
-
-    @FindBy (css = "[class='last']>span")
+    @FindBy(css = "[class='last']>span")
     public WebElement dresses;
-
-    @FindBy(css= "[title='Short dress, long dress, silk dress, printed dress, you will find the perfect dress for summer.']")
+    @FindBy(css = "[title='Short dress, long dress, silk dress, printed dress, you will find the perfect dress for summer.']")
     public WebElement summerDresses;
-
-    @FindBy (xpath= "//a[@class='product-name']")
+    @FindBy(xpath = "//a[@class='product-name']")
     public WebElement dress;
-
-    @FindBy (xpath = "//button[@class='exclusive']//span")
+    @FindBy(xpath = "//button[@class='exclusive']//span")
     public WebElement add;
-
-    @FindBy (xpath = "//span[@class='title']")
+    @FindBy(xpath = "//span[@class='title']")
     public WebElement product;
-
-
     @FindBy(name = "processCarrier")
     public WebElement processCarrier;
-
     @FindBy(id = "ccbill-standard-btn")
     public WebElement creditcart;
-
     @FindBy(xpath = "//body[text()='Invalid request (1).']")
     public WebElement creditcartwarming;
-
     @FindBy(xpath = "(//div[@class='col-xs-12'])[1]")
     public WebElement PayBankWire;
-
     @FindBy(id = "total_price")
     public WebElement totalPrice;
-
     @FindBy(id = "amount")
     public WebElement amount;
-
     @FindBy(xpath = "//span[text()='I confirm my order']")
     public WebElement confirmbutton;
-
     @FindBy(css = "[class='alert alert-success']")
     public WebElement orderComplete;
     @FindBy(css = "[class='product-image-container']")
     public List<WebElement> images;
-
 
 
 }

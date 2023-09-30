@@ -1,23 +1,21 @@
 package StepDefinitions;
 
-import Pages.CenterContainer_SayfaninOrtasi;
+import Pages.CenterContainer;
 import Utilities.GWD;
-import io.cucumber.java.bs.A;
 import io.cucumber.java.en.*;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import org.testng.asserts.SoftAssert;
 
-public class _07_SiparişVer {
+public class _07_OrderAndPaymentSteps {
     SoftAssert _softAssert = new SoftAssert();
 
-    CenterContainer_SayfaninOrtasi cd = new CenterContainer_SayfaninOrtasi();
+    CenterContainer cd = new CenterContainer();
 
-    @When("sepete git")
-    public void sepeteGit() {
+    @When("Click to Cart")
+    public void clickToCart() {
         cd.hoverOver(cd.cartBtn);
     }
+
 
     @Then("Click Checkout and select adress")
     public void clickCheckoutAndSelectAdress() {
@@ -53,12 +51,10 @@ public class _07_SiparişVer {
 
     @And("Click bank wire and camparing price")
     public void clickPayByBankWire() {
-        String str1= cd.totalPrice.getText();
+        String str1 = cd.totalPrice.getText();
         cd.myClick(cd.PayBankWire);
-        String str2=cd.amount.getText();
-        System.out.println("str1 = " + str1);
-        System.out.println("str2 = " + str2);
-        Assert.assertEquals(str1,str2,"Değerler birbiri ile tutuşmuyor ");
+        String str2 = cd.amount.getText();
+        Assert.assertEquals(str1, str2, "Değerler birbiri ile tutuşmuyor ");
 
     }
 
