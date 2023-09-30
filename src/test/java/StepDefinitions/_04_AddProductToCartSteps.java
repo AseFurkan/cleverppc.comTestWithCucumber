@@ -1,13 +1,12 @@
 package StepDefinitions;
 
-import Pages.CenterContainer_SayfaninOrtasi;
-import Utilities.GWD;
+import Pages.CenterContainer;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-public class _04_ {
-        CenterContainer_SayfaninOrtasi cd = new CenterContainer_SayfaninOrtasi();
+public class _04_AddProductToCartSteps{
+        CenterContainer cd = new CenterContainer();
 
      @When("Click women button")
      public void clickWomenButton() {cd.myClick(cd.women);}

@@ -1,24 +1,20 @@
 package StepDefinitions;
-import Pages.CenterContainer_SayfaninOrtasi;
-import Pages.HeaderContainer_SayfaninUstu;
+import Pages.CenterContainer;
+import Pages.HeaderContainer;
 import Utilities.GWD;
 import io.cucumber.java.en.*;
 import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.Select;
+
 import java.awt.*;
 import java.awt.datatransfer.StringSelection;
 import java.awt.event.KeyEvent;
 
-public class _08_ {
-    HeaderContainer_SayfaninUstu hd = new HeaderContainer_SayfaninUstu();
-    CenterContainer_SayfaninOrtasi cd=new CenterContainer_SayfaninOrtasi();
+public class _08_ContactUsSteps {
+    HeaderContainer hd = new HeaderContainer();
+    CenterContainer cd=new CenterContainer();
 
-    @When("Navigate to Website")
-    public void navigateToWebsite() {
-        GWD.getDriver().get("https://cleverppc.com/prestashop4/");
-    }
+
 
     @Then("Click contactUs button")
     public void clickContactUsButton() {
@@ -27,17 +23,15 @@ public class _08_ {
 
     @Then("Select Subject Heading")
     public void selectSubjectHeading() {
-        cd.makingSelectionByIndex(cd.subjectHeading, 2);
+        cd.makingSelectionByIndex(cd.subjectHeading,1);
     }
-
-    @And("Enter e-mail as {string} in the input")
-    public void enterEMailAsInTheInput(String email) {
-        cd.mySendKeys(cd.email, email);
+    @And("Select Order Reference")
+    public void selectOrderReference() {
+        cd.makingSelectionByIndex(cd.orderReference,1);
     }
-
-    @And("Enter order reference  as {string}")
-    public void enterOrderReferenceAs(String orderReference) {
-        cd.mySendKeys(cd.orderReference, orderReference);
+    @And("Select Product")
+    public void selectProduct() {
+        cd.makingSelectionByIndex(cd.productSelect,1);
     }
 
     @When("Upload image")
@@ -86,4 +80,7 @@ public class _08_ {
     public void successMessageShouldBeDisplayed() {
         cd.verifyContainsText(cd.success, "Your message has been successfully sent to our team");
     }
+
+
+
 }
