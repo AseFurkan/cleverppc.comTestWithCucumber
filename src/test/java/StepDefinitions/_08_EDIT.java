@@ -1,6 +1,6 @@
 package StepDefinitions;
 
-import Pages.CenterContainer_SayfaninOrtasi;
+import Pages.CenterContainer;
 import io.cucumber.java.en.Then;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
@@ -10,7 +10,7 @@ import java.util.*;
 
 
 public class _08_EDIT {
-    CenterContainer_SayfaninOrtasi cd = new CenterContainer_SayfaninOrtasi();
+    CenterContainer cd = new CenterContainer();
 
 
     @Then("kullanici rastgele urun secsin")

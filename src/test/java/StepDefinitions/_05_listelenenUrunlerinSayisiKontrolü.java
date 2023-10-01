@@ -1,6 +1,6 @@
 package StepDefinitions;
 
-import Pages.CenterContainer_SayfaninOrtasi;
+import Pages.CenterContainer;
 import Utilities.GWD;
 import io.cucumber.java.en.And;
 import org.openqa.selenium.interactions.Actions;
@@ -9,7 +9,7 @@ import sun.security.krb5.SCDynamicStoreConfig;
 import sun.util.resources.CalendarData;
 
 public class _05_listelenenUrunlerinSayisiKontrolü {
-    CenterContainer_SayfaninOrtasi cd=new CenterContainer_SayfaninOrtasi();
+    CenterContainer cd=new CenterContainer();
 
 
 

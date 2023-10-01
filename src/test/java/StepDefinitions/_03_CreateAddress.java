@@ -11,8 +11,8 @@ import org.testng.Assert;
 import java.security.Key;
 
 public class _03_CreateAddress {
-    FooterContainer_SayfaninAlti fc=new FooterContainer_SayfaninAlti();
-    CenterContainer_SayfaninOrtasi cd=new CenterContainer_SayfaninOrtasi();
+    FooterContainer fc=new FooterContainer();
+    CenterContainer cd=new CenterContainer();
     @And("SiteMape tıklayıp adreesse tıkla")
     public void sitemapeTıklayıpAdreesseTıkla() {
         fc.myClick(fc.siteMap);
