@@ -21,6 +21,7 @@ public class _06_AddProductControlSteps {
         List<WebElement> selectedAddToCarts = new ArrayList<>();
         List<String> selectedProductName = new ArrayList<>();
 
+
         while (selectedElements.size() < sayi) {
             int randomIndex = random.nextInt(cd.quickView.size());
             WebElement selectedElement = cd.quickView.get(randomIndex);

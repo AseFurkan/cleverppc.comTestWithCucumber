@@ -22,7 +22,7 @@ public class _01Regision_ {
     public void iClickOnSignInButton()
     {
         ct.myClick(ct.login);
-        ct.mySendKeys(ct.loginEmail,"test2-7@gmail.com"+ Keys.ENTER);
+        ct.mySendKeys(ct.loginEmail,"test2-78@gmail.com"+ Keys.ENTER);
         ct.myClick(ct.loginGender);
         ct.mySendKeys(ct.customerfirstname,"togi");
         ct.mySendKeys(ct.customerlastname,"brown");
