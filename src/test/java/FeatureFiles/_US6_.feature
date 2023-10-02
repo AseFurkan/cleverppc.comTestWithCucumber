@@ -1,20 +1,12 @@
-Feature:Clever test
+Feature:Control of products added to the basket
 
-  Scenario: Test US6
-  When Navigate to Website
+  Background:
+    When Navigate to Website
     Then Enter username and password and click login button
     And User should login successfully
+
+  @Products @Cart @Regression
+  Scenario: Positive product control
     And Click to dresses
-    Then Select a dress and continue shopping
-    And Select another dress and continue shopping
-    And Select another last dress
-    When Check shopping cart
-
-
-
-
-
-
-
-
-
+    Then Add "3" random items to cart
+    And Verify that the products are in the cart
